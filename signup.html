@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+signup
+</title>
+<link rel="stylesheet" type="text/css" href="signup.css" >
+</head>
+<body>
+<script>
+function checkdata()
+{
+	u = document.getElementById("username").value;
+      if (u.length==0) {
+         alert("User name cannot be empty!");
+         return false;
+      }
+    x = document.getElementById("password").value;
+      if (x.length==0) {
+         alert("Password cannot be empty!");
+         return false;
+      }
+    y = document.getElementById("confirmpassword").value;
+      if (y.length==0) {
+         alert("Confirm Password cannot be empty!");
+         return false;
+      }
+}
+</script>
+	<div id="signuparea">
+	<h1>
+	SignUp
+	</h1>
+	<h2><a href="homepage.html">HomePage</a></h2>
+	<div id="signup">
+	<form method="post" action="loginform.php" onsubmit="return checkdata();">
+	<p>
+	User name &nbsp;&nbsp;
+	<input type="text" id="username" value="" name="user">
+	</p>
+	<p>
+	Password&nbsp;&nbsp;
+	<input type="password" id="password" value="" name="password"
+	</p>
+	<p>
+	Confirm Password &nbsp;&nbsp;
+	<input type="password" id="confirmpassword" value="" name="confirmpassword"
+	</p>
+	<p>
+	Gender:
+      	<input type="radio" id="Male" name="gender" value="Male" checked>Male
+      	<input type="radio" id="Female" name="gender" value="Female">Female
+      	<br />
+	</p>
+	<p>
+	<script>
+	document.write("Age:");
+	document.write("<select name='year'>");
+	year=1;
+	while( year<=100)
+	{
+  	document.write("<option>"+year+"</option>");
+  	year=year+1;
+	}
+	document.write("</select>")
+	</script>
+	</p>
+	<p>
+	Occupation:
+		<select name="occupation">
+        <option value="0" selected>Student</option>
+        <option value="1">Engineer</option>
+        <option value="2">Others</option>
+        <br>
+		</select>
+	</p>
+	<p>
+How can you know the exitence of oursite?<br><br>
+  		<input type="checkbox" id="newspaper" name="AD" value="newspaper" checked>Newspaper &nbsp;
+  		<input type="checkbox" id="magazine" name="AD" value="magazine">Magazine
+  		<input type="checkbox" id="friends" name="AD" value="friends">Friends<br />
+</p>
+	</div>
+	<div id="signupbutton">
+	<input type="submit" id="submit" value="signup">
+	</div>
+	</form>
+	
+	</div>
+
+</body>
+</html>
