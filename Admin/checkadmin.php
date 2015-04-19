@@ -5,7 +5,7 @@
 
 	mysql_connect("localhost", "root","") or die(mysql_error()); //Connect to server
 	mysql_select_db("first_db") or die("Cannot connect to database"); //Connect to database
-	$query = mysql_query("SELECT * from admin WHERE account='$account'"); //Query the users table if there are matching rows equal to $account
+	$query = mysql_query("SELECT * from admin WHERE account='$account'"); //Query the admins table if there are matching rows equal to $account
 	$exists = mysql_num_rows($query); //Checks if account exists
 	$table_account = "";
 	$table_password = "";
@@ -20,21 +20,21 @@
 		{
 				if($password == $table_password)
 				{
-					$_SESSION['user'] = $account; //set the account in a session. This serves as a global variable
-					header("location: admin.php"); // redirects the user to the authenticated home page
+					$_SESSION['admin'] = $account; //set the account in a session. This serves as a global variable
+					header("location: admin.php"); // redirects the admin to the authenticated home page
 				}
 				
 		}
 		else
 		{
-			Print '<script>alert("Incorrect Password!");</script>'; //Prompts the user
+			Print '<script>alert("Incorrect Password!");</script>'; //Prompts the admin
 			Print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
 		}
 
 	}
 	else
 	{
-		Print '<script>alert("Incorrect account!");</script>'; //Prompts the user
+		Print '<script>alert("Incorrect account!");</script>'; //Prompts the admin
 		Print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
 	}
 ?>
