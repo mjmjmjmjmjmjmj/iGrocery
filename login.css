@@ -1,6 +1,6 @@
 p
 {
-	color:#444444;
+	color:#FFFFFF;
 	font-family: Helvetica;
 	font-size: 16px;
 }
@@ -28,6 +28,15 @@ h3
 	margin-left:auto;
 	margin-right:auto;
 	background-image: url(1.jpg);
+}
+#logo
+{
+	border: 1px solid yellow;	
+	height:148px;
+	width:148px;
+	margin-left:625px;
+	margin-right:50px;
+	margin-top:-75px;
 }
 #login
 {

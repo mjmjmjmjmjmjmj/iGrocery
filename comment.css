@@ -51,7 +51,15 @@ h3
 	background-image: url(1.jpg)
 	
 }
-
+#logo
+{
+	border: 1px solid yellow;	
+	height:148px;
+	width:148px;
+	margin-left:625px;
+	margin-right:50px;
+	margin-top:-125px;
+}
 #textarea
 {	
 	border: 1px solid green;

@@ -8,7 +8,18 @@ h1
 {
 	color:#444444;
 	font-family: Helvetica;
+	border-radius: 20px;
+    background-color: rgb(100%,100%,60%);
+    width: 600px;
+    display:block;
+
 }
+h1:hover {
+      box-shadow: 5px 5px 10px;
+      position: relative;
+      top: -5px;
+      left: -5px;
+  }
 h2
 {
 	color:#444444;
@@ -29,6 +40,18 @@ h3
 	margin-right:auto;
 	background-image: url(1.jpg);
 }
+#logo
+{
+	border: 1px solid yellow;	
+	height:148px;
+	width:148px;
+	margin-left:625px;
+	margin-right:50px;
+	margin-top:-125px;
+
+}
+
+
 #signup
 {
 	border:1px solid green;
@@ -46,7 +69,7 @@ h3
 	width:50px;
 	margin-left:500px;
 	margin-right:300px;
-	margin-top:40px;
+	margin-top:20px;
 	margin-bottom:auto;
 
 }
